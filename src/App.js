@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useContext, useState } from 'react'
+
+import { CounterContext } from './context/CounterContext'
+import {CounterDisplay } from './pages/CounterDisplay/CounterDisplay'
+import { CounterProvaider } from './pages/CounterProvaider/CounterProvaider'
+
+import './App.css'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+ return (
+  <div className='app'>
+   <CounterProvaider>
+    <CounterDisplay />
+   </CounterProvaider>
+   </div>
+ )
 }
 
-export default App;
+export default App
